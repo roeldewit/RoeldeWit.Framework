@@ -50,7 +50,14 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Classes\TemperatureTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RoeldeWit.Framework\RoeldeWit.Framework.csproj">
+      <Project>{358cdf5c-142c-4a37-a21a-cd7d3e0a6d15}</Project>
+      <Name>RoeldeWit.Framework</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
