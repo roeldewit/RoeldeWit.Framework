@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Classes\Temperature.cs" />
     <Compile Include="Enums\TemperatureUnit.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

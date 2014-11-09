@@ -1,19 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace RoeldeWit.Framework.Test.Classes
 {
+    /// <summary>
+    /// Class with all the tests for Temperature class
+    /// </summary>
     [TestClass]
     public class TemperatureTest
     {
         private const double Precision = 1e-6;
 
+        /// <summary>
+        /// Test temperature conversion with Celsius as starting temperature unit
+        /// </summary>
         [TestMethod]
+        [Owner("Roel de Wit")]
         public void Temperature_Celcius()
         {
             Temperature temperature = new Temperature(TemperatureUnit.Celsius, -273.15);
@@ -53,7 +54,11 @@ namespace RoeldeWit.Framework.Test.Classes
             Assert.AreEqual(373.15, temperature.DegreesKelvin, Precision, "Wrong value of degrees Kelvin");
         }
 
+        /// <summary>
+        /// Test temperature conversion with Fahrenheit as starting temperature unit
+        /// </summary>
         [TestMethod]
+        [Owner("Roel de Wit")]
         public void Temperature_Fahrenheit()
         {
             Temperature temperature = new Temperature(TemperatureUnit.Fahrenheit, -459.67);
@@ -93,7 +98,11 @@ namespace RoeldeWit.Framework.Test.Classes
             Assert.AreEqual(373.15, temperature.DegreesKelvin, Precision, "Wrong value of degrees Kelvin");
         }
 
+        /// <summary>
+        /// Test temperature conversion with Kelvin as starting temperature unit
+        /// </summary>
         [TestMethod]
+        [Owner("Roel de Wit")]
         public void Temperature_Kelvin()
         {
             Temperature temperature = new Temperature(TemperatureUnit.Kelvin, 0);
