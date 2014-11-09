@@ -42,7 +42,7 @@ namespace RoeldeWit.Framework
                     break;
                 case TemperatureUnit.Fahrenheit:
                     DegreesFahrenheit = degrees;
-                    DegreesCelsius = (degrees - 32) * (5 / 9);
+                    DegreesCelsius = (degrees - 32) * 5 / 9;
                     break;
             }
         }

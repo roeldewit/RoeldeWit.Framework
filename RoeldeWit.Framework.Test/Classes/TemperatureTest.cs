@@ -46,5 +46,39 @@ namespace RoeldeWit.Framework.Test.Classes
             Assert.AreEqual(100, temperature.DegreesCelsius, Precision, "Wrong value of degrees Celsius");
             Assert.AreEqual(212, temperature.DegreesFahrenheit, Precision, "Wrong value of degrees Fahrenheit");
         }
+
+        [TestMethod]
+        public void Temperature_Fahrenheit()
+        {
+            Temperature temperature = new Temperature(TemperatureUnit.Fahrenheit, -459.67);
+
+            Assert.AreEqual(-273.15, temperature.DegreesCelsius, Precision, "Wrong value of degrees Celsius");
+            Assert.AreEqual(-459.67, temperature.DegreesFahrenheit, Precision, "Wrong value of degrees Fahrenheit");
+
+            temperature = new Temperature(TemperatureUnit.Fahrenheit, 32);
+
+            Assert.AreEqual(0, temperature.DegreesCelsius, Precision, "Wrong value of degrees Celsius");
+            Assert.AreEqual(32, temperature.DegreesFahrenheit, Precision, "Wrong value of degrees Fahrenheit");
+
+            temperature = new Temperature(TemperatureUnit.Fahrenheit, 50);
+
+            Assert.AreEqual(10, temperature.DegreesCelsius, Precision, "Wrong value of degrees Celsius");
+            Assert.AreEqual(50, temperature.DegreesFahrenheit, Precision, "Wrong value of degrees Fahrenheit");
+
+            temperature = new Temperature(TemperatureUnit.Fahrenheit, 69.8);
+
+            Assert.AreEqual(21, temperature.DegreesCelsius, Precision, "Wrong value of degrees Celsius");
+            Assert.AreEqual(69.8, temperature.DegreesFahrenheit, Precision, "Wrong value of degrees Fahrenheit");
+
+            temperature = new Temperature(TemperatureUnit.Fahrenheit, 98.6);
+
+            Assert.AreEqual(37, temperature.DegreesCelsius, Precision, "Wrong value of degrees Celsius");
+            Assert.AreEqual(98.6, temperature.DegreesFahrenheit, Precision, "Wrong value of degrees Fahrenheit");
+
+            temperature = new Temperature(TemperatureUnit.Fahrenheit, 212);
+
+            Assert.AreEqual(100, temperature.DegreesCelsius, Precision, "Wrong value of degrees Celsius");
+            Assert.AreEqual(212, temperature.DegreesFahrenheit, Precision, "Wrong value of degrees Fahrenheit");
+        }
     }
 }
