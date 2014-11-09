@@ -14,6 +14,11 @@ namespace RoeldeWit.Framework
         /// <summary>
         /// Fahrenheit
         /// </summary>
-        Fahrenheit
+        Fahrenheit,
+
+        /// <summary>
+        /// Kelvin
+        /// </summary>
+        Kelvin
     }
 }
